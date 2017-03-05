@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#f99b06</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="main_bottom_radio_group_line">#c6c6c6</color>
+    <color name="back_ground_color">#efefef</color>
+    <color name="skyline_theme_color">#f99b06</color>
+    <color name="text_black_color">#101010</color>
+    <color name="home_search_color">#999999</color>
+    <color name="text_grey_color">#666666</color>
+    <color name="text_write_color">#ffffff</color>
+    <color name="tv_line_color">#eeeeee</color>
+
+
+
+
+
+
+
+</resources>

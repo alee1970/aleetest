@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="darkblue.com.skyline.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"></LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/main_radio_group"
+        android:background="@color/main_bottom_radio_group_line" />
+
+    <RadioGroup
+        android:id="@+id/main_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="6dp">
+
+        <RadioButton
+            android:id="@+id/main_radio_buton_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="-12dp"
+            android:drawableTop="@drawable/main_home_radio_button_select" />
+
+        <RadioButton
+            android:id="@+id/main_radio_buton_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="-12dp"
+            android:drawableTop="@drawable/main_message_radio_button_select" />
+
+        <RadioButton
+            android:id="@+id/main_radio_buton_credit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="-12dp"
+            android:drawableTop="@drawable/main_credit_radio_button_select" />
+
+        <RadioButton
+            android:id="@+id/main_radio_buton_my"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="-12dp"
+            android:drawableTop="@drawable/main_my_radio_button_select" />
+    </RadioGroup>
+
+</LinearLayout>
