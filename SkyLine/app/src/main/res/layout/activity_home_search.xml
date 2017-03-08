@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_ground_color"
+    tools:context="darkblue.com.skyline.UI.Activity.HomeSearchActivity">
+
+
+
+    <LinearLayout
+        android:id="@+id/linear_layout_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal"
+        android:padding="6dp">
+
+
+        <EditText
+            android:id="@+id/et_home_fragment_search_word"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:background="#e79006"
+            android:drawableLeft="@mipmap/icon_main_home_search"
+            android:drawablePadding="4dp"
+            android:hint="请输入关键字"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:textColorHint="@color/text_write_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_home_search_ensure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:textColor="@color/text_write_color"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_below="@+id/linear_layout_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_search_history_dynamic_txt"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F6F6F6"
+            android:text="搜索历史" />
+
+        <ListView
+            android:id="@+id/list_View_search_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/tv_line_color" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_search_history_clear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F6F6F6"
+            android:gravity="center"
+            android:text="清除搜索历史" />
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_search_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_layout_search"
+        android:padding="8dp"
+        android:text="搜索历史" />
+
+    <GridView
+        android:id="@+id/grid_view_search_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_search_txt"
+        android:numColumns="2"
+
+        ></GridView>
+
+
+</RelativeLayout>

@@ -54,7 +54,6 @@ public class MainActivity extends FragmentActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         fragmentManager = getSupportFragmentManager();
 
         x.view().inject(this);//xutils框架绑定UI
@@ -92,7 +91,7 @@ public class MainActivity extends FragmentActivity {
      * 恢复fragment
      */
     private void restoreFragment(){
-
+        FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction mBeginTreansaction = fragmentManager.beginTransaction();
 
         for (int i = 0; i < fragments.size(); i++) {
@@ -197,7 +196,7 @@ public class MainActivity extends FragmentActivity {
      */
     private void showFirstFragment() {
 
-
+        FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager
                 .beginTransaction();
         // transaction事务：包含多个动作

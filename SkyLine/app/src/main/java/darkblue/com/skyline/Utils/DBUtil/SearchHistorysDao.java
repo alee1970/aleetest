@@ -3,6 +3,7 @@ package darkblue.com.skyline.Utils.DBUtil;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -59,7 +60,7 @@ public class SearchHistorysDao {
 
 
 	/**
-	 *
+	 *删除所有数据
 	 */
 
 	public void deleteAll(){
@@ -68,4 +69,26 @@ public class SearchHistorysDao {
 		db.close();
 	}
 
+	public ArrayList<SearchHistorysBean> queryData(Context context, String tempName) {
+		ArrayList<SearchHistorysBean> data = new ArrayList<SearchHistorysBean>();;
+		helper = new DBSearchHelper(context);
+		Cursor cursor = helper.getReadableDatabase().rawQuery(
+				"select id as _id,historyword from t_historywords where historyword like '%" + tempName + "%' order by updatetime desc ", null);
+
+		while(cursor.moveToNext()){
+
+			SearchHistorysBean searchDBData = new SearchHistorysBean();
+			searchDBData._id =cursor.getInt(cursor.getColumnIndex("_id"));
+			Log.d("SearchHistorysDao", cursor.getColumnIndex("_id")+"");
+			searchDBData.historyword = cursor.getString(cursor.getColumnIndex("historyword"));
+			Log.d("SearchHistorysDao", cursor.getString(cursor.getColumnIndex("historyword"))+"");
+
+			searchDBData.updatetime = cursor.getLong(cursor.getColumnIndex("updatetime"));
+			Log.d("SearchHistorysDao", cursor.getLong(cursor.getColumnIndex("updatetime"))+"");
+
+			data.add(searchDBData);
+		}
+
+		return data;
+	}
 }

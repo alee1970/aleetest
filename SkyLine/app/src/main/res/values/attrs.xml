@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="myround">
+        <attr name="currentnum" format="integer" />
+        <attr name="allnum" format="integer" />
+        <attr name="remind" format="string" />
+        <attr name="roundwidth" format="integer" />
+    </declare-styleable>
+
+
+    <declare-styleable name="CircleScaleView">
+        <attr name="lifeCostColor" format="color|reference" />
+        <attr name="communicateCostColor" format="color|reference" />
+        <attr name="trafficCostColor" format="color|reference" />
+        <attr name="entertainmentCostColor" format="color|reference" />
+        <attr name="circleWidth" format="dimension" />
+        <attr name="radius" format="dimension" />
+    </declare-styleable>
+</resources>

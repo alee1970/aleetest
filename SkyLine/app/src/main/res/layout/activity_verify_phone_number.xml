@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_verify_phone_number"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="darkblue.com.skyline.UI.Activity.VerifyPhoneNumberActivity">
+    <!-- 验证手机号-->
+
+
+
+    <RelativeLayout
+        android:id="@+id/relative_home_add_bank_card_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimaryDark"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="验证手机号"
+            android:textColor="@color/text_write_color" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_input_delete" />
+
+
+    </RelativeLayout>
+
+
+
+        <TextView
+            android:padding="8dp"
+            android:id="@+id/one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="本次操作需要短信确认，请输入135****1234收到的短信校验码"
+             />
+
+
+    <LinearLayout
+        android:id="@+id/relative_home_add_bank_card_card"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/text_write_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="银行预留的手机号"
+            android:textColor="@color/text_black_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="获取验证码"
+            android:textColor="@color/colorPrimaryDark" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:padding="8dp"
+        android:text="收不到验证码？"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="12sp" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="下一步"
+
+        />
+
+
+</LinearLayout>

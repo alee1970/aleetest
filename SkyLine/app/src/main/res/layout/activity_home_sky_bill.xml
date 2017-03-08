@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_home_sky_bill"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="darkblue.com.skyline.UI.Activity.HomeSkyBillActivity">
+
+
+    <!--天际账单标题-->
+    <RelativeLayout
+        android:id="@+id/relative_home_sky_bill_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="天际账单"
+            android:textColor="@color/text_write_color" />
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_input_delete" />
+    </RelativeLayout>
+
+
+    <!--消费情况+日期选择-->
+    <RelativeLayout
+        android:id="@+id/relative_home_sky_bill_detail_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative_home_sky_bill_title"
+        android:layout_marginTop="8dp"
+        android:background="@color/text_write_color"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="1月消费情况"
+            android:textColor="@color/text_black_color" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@android:drawable/ic_delete"
+
+            />
+
+    </RelativeLayout>
+
+
+    <!--消费曲线图-->
+    <RelativeLayout
+        android:id="@+id/relative_home_sky_bill_detail"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/relative_home_sky_bill_detail_select"
+        android:layout_marginTop="1dp"
+        android:background="@color/text_write_color">
+
+
+    </RelativeLayout>
+
+    <!--消费账单-->
+    <RelativeLayout
+        android:id="@+id/relative_home_sky_bill_bill_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative_home_sky_bill_detail"
+        android:layout_marginTop="8dp"
+        android:background="@color/text_write_color"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="消费账单 "
+            android:textColor="@color/text_black_color" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relative_home_sky_bill_bill"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/relative_home_sky_bill_bill_txt"
+        android:layout_above="@+id/linear_home_sky_bill"
+        android:layout_marginTop="1dp"
+        android:background="@color/text_write_color"
+        android:padding="8dp">
+
+
+    </RelativeLayout>
+
+
+    <!--底部四个功能模块-->
+    <LinearLayout
+        android:id="@+id/linear_home_sky_bill"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <!--钱来钱往-->
+        <RelativeLayout
+            android:id="@+id/relative_home_sk_bill_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relative_home_ske_bill_detail"
+            android:background="@color/text_write_color"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="钱来钱往"
+                android:textColor="@color/text_black_color" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="与4从发生金金钱来往" />
+        </RelativeLayout>
+
+
+        <!--与他人交易-->
+        <RelativeLayout
+            android:id="@+id/relative_home_sk_bill_trade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relative_home_ske_bill_detail"
+            android:layout_marginTop="1dp"
+            android:background="@color/text_write_color"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="与他人交易" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="-150000.00" />
+        </RelativeLayout>
+
+
+        <!--授信还款-->
+        <RelativeLayout
+            android:id="@+id/relative_home_sky_bill_refund"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relative_home_sky_bill_detail"
+            android:layout_marginTop="1dp"
+            android:background="@color/text_write_color"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="授信还款" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="4520.00.00" />
+        </RelativeLayout>
+
+
+        <!--添加到银行卡-->
+        <RelativeLayout
+            android:id="@+id/relative_home_sky_bill_withdraw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/text_write_color"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="提现到银行卡" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="1.58" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

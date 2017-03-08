@@ -2,9 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="darkblue.com.skyline">
 
-
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -19,8 +19,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UI.Activity.LoginActivity" />
-        <activity android:name=".UI.Activity.SearchActivity"></activity>
+        <activity android:name=".UI.Activity.UserLoginActivity" />
+        <activity android:name=".UI.Activity.HomeSearchActivity" />
+        <activity android:name=".UI.Activity.UserRegisterActivity" />
+        <activity android:name=".UI.Activity.UserRegisterSettingPasswordActivity" />
+        <activity android:name=".UI.Activity.UserResetPasswordActivity" />
+        <activity android:name=".UI.Activity.HomeSkyBillActivity" />
+        <activity android:name=".UI.Activity.HomeSkyBillDetailActivity" />
+        <activity android:name=".UI.Activity.HomePaymentOrderActivity" />
+        <activity android:name=".UI.Activity.HomeAddBankCardActivity" />
+        <activity android:name=".UI.Activity.HomeFillBankCardInfoActivity" />
+        <activity android:name=".UI.Activity.VerifyPhoneNumberActivity" />
+        <activity android:name=".UI.Activity.HomeMyFundsActivity" />
+        <activity android:name=".UI.Activity.HomeSupplyActivity"></activity>
     </application>
 
 </manifest>

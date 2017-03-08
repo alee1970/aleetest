@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_write_color"
+    android:padding="8dp"
+    >
+
+    <RelativeLayout
+        android:layout_gravity="center_vertical"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/item_home_payment_order_cart_good_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全新iPhone6"
+            android:textSize="16sp"
+            android:textColor="@color/text_black_color"
+            />
+
+        <TextView
+            android:layout_below="@+id/item_home_payment_order_cart_good_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="玫瑰金色 32GB"
+
+
+            />
+
+
+    </RelativeLayout>
+
+
+
+
+    <TextView
+        android:layout_gravity="center_vertical"
+        android:layout_below="@+id/item_home_payment_order_cart_good_name"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="￥25000.00"
+        android:gravity="center"
+
+
+        />
+
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_media_previous"
+            android:layout_height="wrap_content"
+            android:text="5"
+
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="5"
+
+            />
+        <ImageView
+            android:src="@android:drawable/ic_media_next"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="5"
+
+            />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

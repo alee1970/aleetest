@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.githang.statusbar.StatusBarCompat;
@@ -15,7 +16,10 @@ import com.githang.statusbar.StatusBarCompat;
 import org.xutils.x;
 
 import darkblue.com.skyline.R;
-import darkblue.com.skyline.UI.Activity.SearchActivity;
+import darkblue.com.skyline.UI.Activity.HomeMyFundsActivity;
+import darkblue.com.skyline.UI.Activity.HomeSearchActivity;
+import darkblue.com.skyline.UI.Activity.HomeSkyBillActivity;
+import darkblue.com.skyline.UI.Activity.HomeSupplyActivity;
 
 
 /**
@@ -30,6 +34,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     private View view;//布局的View
     private TextView tvMore;//更多
     private TextView tvSearch;
+    private RelativeLayout relativeLayoutMyFunds;
+    private TextView tvSupply;//我的供货
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -49,6 +55,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     private void initView(){
         tvSearch = (TextView) view.findViewById(R.id.tv_home_fragment_search);
         tvMore = (TextView) view.findViewById(R.id.tv_home_more);
+        tvSupply = (TextView) view.findViewById(R.id.tv_home_supply);
+        relativeLayoutMyFunds = (RelativeLayout) view.findViewById(R.id.relative_home_my_funds);
+        relativeLayoutMyFunds.setOnClickListener(this);
+        tvSupply.setOnClickListener(this);
         tvMore.setOnClickListener(this);
         tvSearch.setOnClickListener(this);
     }
@@ -91,10 +101,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
 
             case R.id.tv_home_fragment_search: //顶部搜索框
 
-                startActivity(new Intent(getActivity(), SearchActivity.class));
+                startActivity(new Intent(getActivity(), HomeSearchActivity.class));
                 break;
 
             case R.id.tv_home_more_bill: //天际账单
+                startActivity(new Intent(getActivity(), HomeSkyBillActivity.class));
 
                 break;
             case R.id.tv_home_more_service: //我的客服
@@ -107,6 +118,14 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
 
                 break;
             case R.id.tv_home_bank_card: //银行卡
+
+                break;
+            case R.id.relative_home_my_funds: //总资产
+                startActivity(new Intent(getActivity(), HomeMyFundsActivity.class));
+
+                break;
+            case R.id.tv_home_supply: //总资产
+                startActivity(new Intent(getActivity(), HomeSupplyActivity.class));
 
                 break;
 

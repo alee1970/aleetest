@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_home_payment_order"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="darkblue.com.skyline.UI.Activity.HomePaymentOrderActivity">
+
+
+    <!--付款单-->
+    <RelativeLayout
+        android:id="@+id/relative_home_payment_order_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimaryDark"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="付款单"
+            android:textColor="@color/text_write_color" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_input_delete" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:text="明细"
+            android:textColor="@color/text_write_color" />
+
+    </RelativeLayout>
+
+    <!--项部四个模块-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative_home_payment_order_title"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <!--手机型号-->
+        <RelativeLayout
+            android:id="@+id/relative_home_sk_bill_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relative_home_ske_bill_detail"
+            android:background="@color/text_write_color"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="手机型号*"
+                android:textColor="@color/text_black_color" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawableRight="@android:drawable/ic_media_next"
+                android:gravity="center_vertical"
+                android:text="iphone6玫瑰金色 64GB" />
+        </RelativeLayout>
+
+
+        <!--购买数量-->
+        <RelativeLayout
+            android:id="@+id/relative_home_sk_bill_trade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relative_home_ske_bill_detail"
+            android:layout_marginTop="1dp"
+            android:background="@color/text_write_color"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="购买数量*"
+                android:textColor="@color/text_black_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="" />
+        </RelativeLayout>
+
+
+        <!--单价-->
+        <RelativeLayout
+            android:id="@+id/relative_home_sky_bill_refund"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relative_home_sky_bill_detail"
+            android:layout_marginTop="1dp"
+            android:background="@color/text_write_color"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="单价"
+                android:textColor="@color/text_black_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="" />
+        </RelativeLayout>
+
+
+        <!--总金额-->
+        <RelativeLayout
+            android:id="@+id/relative_home_sky_bill_withdraw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/text_write_color"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="总金额*"
+                android:textColor="@color/text_black_color" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <!--底部模块-->
+    <include
+        android:id="@+id/line"
+        layout="@layout/horizontal_division_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/linear_home_payment_bottom" />
+
+    <LinearLayout
+        android:id="@+id/linear_home_payment_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/text_write_color"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:id="@+id/tv_home_payment_order_cart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/icon_main_home_logistics"
+            android:padding="10dp" />
+
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FDBF5C"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="加入购物车"
+            android:textColor="@color/text_write_color" />
+
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="已付款收货"
+            android:textColor="@color/text_write_color" />
+
+    </LinearLayout>
+
+
+
+    <!--底部购物车弹窗-->
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_above="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#991b1b1b"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/relative_home_payment_order_cart_detail"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@color/colorPrimaryDark"
+                android:text="购物车"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="清空"
+                android:textColor="@color/text_black_color" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/relative_home_payment_order_cart_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <ListView
+                android:id="@+id/fdsa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></ListView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
